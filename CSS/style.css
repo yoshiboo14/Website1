@@ -54,14 +54,15 @@ body {
   align-items: center;
 }
 
-.img-wrapper img {
-  width: 400px;
-  height: 450px;
-}
 .img-wrapper {
-  width: 400px;
-  height: 450px;
-  margin-top: 40px;
+  width: 350px;
+  height: 400px;
+  margin-top: 60px;
+}
+
+img {
+  width: 350px;
+  height: 400px;
 }
 .fv-mainmsg {
   font-size: 4rem;
@@ -86,16 +87,61 @@ body {
 
 .fv-inner {
   display: flex;
-  /* 中の要素を下揃えにする */
+  /* 中の要素を下揃えにする 写真も含めたブロックに適用する*/
   align-items: flex-end;
+  /* align-items: center; */
 }
 
 .fv-contents {
-  margin-left: 100px;
+  margin-left: 90px;
 }
 
 .fv-bg {
   /* グラデーションを作る関数 */
   /* %は縦の割合 */
   background-image: linear-gradient(#f3ddd0 0% 50%, #fff 50% 100%);
+}
+
+/* 写真の自動遷移部分 */
+.img-wrapper ul {
+  position: relative;
+}
+
+.img-wrapper li {
+  position: absolute;
+  /* width: 100%; */
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#mark ul li a {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #b4b4b4;
+
+  text-decoration: none;
+  display: block;
+
+  /* ここでの数字は場所の確認をしたいだけで、実際に表示しなくて良い */
+  /* そのため大きさをごく小さくしておく */
+  text-indent: -9999px;
+}
+
+#mark ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* 最後の数字以外に適用 */
+#mark ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
+#mark ul li a.current {
+  background-color: #333333;
 }
