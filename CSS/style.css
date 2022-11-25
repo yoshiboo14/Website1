@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* 共通 */
+html {
+  /* 10pxが1remになる */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  /* 文字の間 */
+  letter-spacing: 0.5rem;
+  /* 行間 */
+  line-height: 1.7;
+  font-family: "Noto Sans JP , sans-serif";
+  color: #333333;
+  background-color: white;
+}
+
+.wrapper {
+  margin: auto 100px;
+}
+
+/* ブラウザごとのデフォルトをリセットしておく */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+.logo {
+  font-family: "Tangerine", cursive;
+  font-size: 4.8rem;
+}
+
+.nav-item {
+  font-size: 1.6rem;
+  /* リストの・が消える */
+  list-style: none;
+  /* 先頭の文字を大文字に変える */
+  text-transform: capitalize;
+  margin-left: 52px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  /* 縦の中央揃え */
+  align-items: center;
+}
+
+.img-wrapper img {
+  width: 400px;
+  height: 450px;
+}
+.img-wrapper {
+  width: 400px;
+  height: 450px;
+  margin-top: 40px;
+}
+.fv-mainmsg {
+  font-size: 4rem;
+}
+
+.fv-leading {
+  width: 425px;
+  margin-top: 21px;
+}
+.btn {
+  display: block;
+  width: 155px;
+  height: 33px;
+  margin-top: 40px;
+  background-color: #8dbfbe;
+  color: white;
+  border-radius: 30px;
+  /* リンクの下線を消すことができる */
+  text-decoration: none;
+  text-align: center;
+}
+
+.fv-inner {
+  display: flex;
+  /* 中の要素を下揃えにする */
+  align-items: flex-end;
+}
+
+.fv-contents {
+  margin-left: 100px;
+}
+
+.fv-bg {
+  /* グラデーションを作る関数 */
+  /* %は縦の割合 */
+  background-image: linear-gradient(#f3ddd0 0% 50%, #fff 50% 100%);
+}
